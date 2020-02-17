@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Members
+    // Serialized fields
     [SerializeField]
     float m_runSpeed = 5.0f;
     [SerializeField]
@@ -15,7 +15,8 @@ public class Player : MonoBehaviour
     // Cached components references
     Rigidbody2D m_rigidBody;
     Animator m_animator;
-    Collider2D m_collider2D;
+    CapsuleCollider2D m_bodyCollider;
+    BoxCollider2D m_feetCollider;
     float m_gravityScaleAtStart;
     
     // States
@@ -26,7 +27,8 @@ public class Player : MonoBehaviour
     {
         m_rigidBody = GetComponent<Rigidbody2D>();
         m_animator = GetComponent<Animator>();
-        m_collider2D = GetComponent<Collider2D>();
+        m_bodyCollider = GetComponent<CapsuleCollider2D>();
+        m_feetCollider = GetComponent<BoxCollider2D>();
         m_gravityScaleAtStart = m_rigidBody.gravityScale;
     }
 
@@ -47,7 +49,7 @@ public class Player : MonoBehaviour
     }
     private void ClimbLadder()
     {
-        if (m_collider2D.IsTouchingLayers(LayerMask.GetMask("Ladders")))
+        if (m_feetCollider.IsTouchingLayers(LayerMask.GetMask("Ladders")))
         {
             float controlThrow = Input.GetAxis("Vertical");
             Vector2 playerVelocity = new Vector2(m_rigidBody.velocity.x, controlThrow * m_climbSpeed);
@@ -66,7 +68,7 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetButtonDown("Jump") && m_collider2D.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        if (Input.GetButtonDown("Jump") && m_feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
             Vector2 jumpVelocityToAdd = new Vector2(0f, m_jumpSpeed);
             m_rigidBody.velocity += jumpVelocityToAdd;
@@ -78,7 +80,7 @@ public class Player : MonoBehaviour
         bool playerHasHorizontalSpeed = Mathf.Abs(m_rigidBody.velocity.x) > Mathf.Epsilon;
         if (playerHasHorizontalSpeed)
         {
-            transform.localScale = new Vector2(Mathf.Sign(m_rigidBody.velocity.x), 1f);
+            transform.localScale = new Vector2(Mathf.Sign(m_rigidBody.velocity.x), 1f); // Changing facing side with correct input
             m_isRunning = true;
         }
         else
