@@ -11,6 +11,10 @@ public class Player : MonoBehaviour
     float m_jumpSpeed = 10.0f;
     [SerializeField]
     float m_climbSpeed = 5.0f;
+    [SerializeField]
+    Vector2 m_deathKick = new Vector2(10.0f, 20.0f);
+    [SerializeField]
+    Vector2 m_beginningPosition = new Vector2(-6.84f, 1.56f);
 
     // Cached components references
     Rigidbody2D m_rigidBody;
@@ -22,6 +26,7 @@ public class Player : MonoBehaviour
     // States
     private bool m_isRunning = false;
     private bool m_isClimbing = false;
+    private bool m_isAlive = true;
 
     void Start()
     {
@@ -34,11 +39,16 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Run();
-        Jump();
-        ClimbLadder();
-        FlipSprite();
-        ChangeAnimations();
+        if (m_isAlive)
+        {
+            Run();
+            Jump();
+            ClimbLadder();
+            FlipSprite();
+            ChangeAnimations();
+            Die();
+        }
+        Reset();
     }
 
     private void Run()
@@ -93,5 +103,31 @@ public class Player : MonoBehaviour
     {
         m_animator.SetBool("Climbing", m_isClimbing);
         m_animator.SetBool("Running", m_isRunning);
+    }
+
+    private void Die()
+    {
+        bool canIDie = m_bodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Spikes"));
+
+        if (canIDie)
+        {
+            Debug.Log("Dies");
+            m_rigidBody.velocity = m_deathKick;
+            transform.localScale = new Vector2(transform.localScale.x * 4, transform.localScale.y * 4);
+            m_animator.SetBool("Dead", true);
+            m_isAlive = false;
+        }
+    }
+
+    private void Reset()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            transform.position = m_beginningPosition;
+            transform.localScale = new Vector2(1f, 1f);
+            m_rigidBody.velocity = new Vector2(0f, 0f);
+            m_isAlive = true;
+            m_animator.SetBool("Dead", false);
+        }
     }
 }
