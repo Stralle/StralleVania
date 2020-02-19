@@ -57,6 +57,7 @@ public class Player : MonoBehaviour
         Vector2 playerVelocity = new Vector2(controlThrow * m_runSpeed, m_rigidBody.velocity.y);
         m_rigidBody.velocity = playerVelocity;
     }
+
     private void ClimbLadder()
     {
         if (m_feetCollider.IsTouchingLayers(LayerMask.GetMask("Ladders")))
