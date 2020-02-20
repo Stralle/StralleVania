@@ -113,7 +113,7 @@ public class Player : MonoBehaviour
         if (canIDie)
         {
             Debug.Log("Dies");
-            m_rigidBody.velocity = m_deathKick;
+            m_rigidBody.AddForce(m_deathKick, ForceMode2D.Impulse); // Google this later
             transform.localScale = new Vector2(transform.localScale.x * 4, transform.localScale.y * 4);
             m_animator.SetBool("Dead", true);
             m_isAlive = false;
