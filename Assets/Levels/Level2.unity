@@ -5967,6 +5967,75 @@ CompositeCollider2D:
       - {x: 7.9838715, y: -3.9839}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!1001 &1186946991
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4910354412901791577, guid: af3db628a79594c48b003131cc195159,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 110.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910354412901791577, guid: af3db628a79594c48b003131cc195159,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910354412901791577, guid: af3db628a79594c48b003131cc195159,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910354412901791577, guid: af3db628a79594c48b003131cc195159,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910354412901791577, guid: af3db628a79594c48b003131cc195159,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910354412901791577, guid: af3db628a79594c48b003131cc195159,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910354412901791577, guid: af3db628a79594c48b003131cc195159,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910354412901791577, guid: af3db628a79594c48b003131cc195159,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910354412901791577, guid: af3db628a79594c48b003131cc195159,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910354412901791577, guid: af3db628a79594c48b003131cc195159,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910354412901791577, guid: af3db628a79594c48b003131cc195159,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910354412901791579, guid: af3db628a79594c48b003131cc195159,
+        type: 3}
+      propertyPath: m_Name
+      value: Level Exit
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: af3db628a79594c48b003131cc195159, type: 3}
 --- !u!1 &1269497317
 GameObject:
   m_ObjectHideFlags: 0
@@ -15065,6 +15134,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_deathKick.y
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168733478201816405, guid: fa08bf530d89439489d11a6f9fe3c519,
+        type: 3}
+      propertyPath: m_beginningPosition.x
+      value: 67.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168733478201816405, guid: fa08bf530d89439489d11a6f9fe3c519,
+        type: 3}
+      propertyPath: m_beginningPosition.y
+      value: 3.99
       objectReference: {fileID: 0}
     - target: {fileID: 2168733478409963459, guid: fa08bf530d89439489d11a6f9fe3c519,
         type: 3}

@@ -29416,22 +29416,22 @@ PrefabInstance:
     - target: {fileID: 1520609172382933784, guid: e80283484baea344280b3a84e8e7e117,
         type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1520609172382933991, guid: e80283484baea344280b3a84e8e7e117,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.0022953
       objectReference: {fileID: 0}
     - target: {fileID: 1520609172382933991, guid: e80283484baea344280b3a84e8e7e117,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -9.166166
       objectReference: {fileID: 0}
     - target: {fileID: 1520609172382933991, guid: e80283484baea344280b3a84e8e7e117,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3822752574849386304, guid: e80283484baea344280b3a84e8e7e117,
         type: 3}
