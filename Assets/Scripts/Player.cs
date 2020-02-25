@@ -117,6 +117,7 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector2(transform.localScale.x * 4, transform.localScale.y * 4);
             m_animator.SetBool("Dead", true);
             m_isAlive = false;
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
 
