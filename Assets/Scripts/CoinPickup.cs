@@ -14,6 +14,7 @@ public class CoinPickup : MonoBehaviour
     bool entered = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Collision " + collision);
         if (!entered)
         {
             AudioSource.PlayClipAtPoint(m_CoinPickupSFX, Camera.main.transform.position);
