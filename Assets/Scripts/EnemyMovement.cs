@@ -10,23 +10,15 @@ public class EnemyMovement : MonoBehaviour
 
     // Cached references
     Rigidbody2D m_rigidBody;
-    //CapsuleCollider2D m_capsuleCollider;
-    //Animator m_animator;
-
-    // States
-    //bool m_isMoving = false;
 
     void Start()
     {
         m_rigidBody = GetComponent<Rigidbody2D>();
-        //m_capsuleCollider = GetComponent<CapsuleCollider2D>();
-        //m_animator = GetComponent<Animator>();
     }
 
     void Update()
     {
         Move();
-        //ChangeAnimations();
     }
 
     private void Move()
@@ -56,10 +48,5 @@ public class EnemyMovement : MonoBehaviour
     void OnTriggerExit2D(Collider2D collision)
     {
         FlipSprite();
-    }
-
-    private void ChangeAnimations()
-    {
-        //m_animator.SetBool("Moving", m_isMoving);
     }
 }

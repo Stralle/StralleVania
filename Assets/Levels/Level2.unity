@@ -15464,15 +15464,20 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1520609172382933785, guid: e80283484baea344280b3a84e8e7e117,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1520609172382933991, guid: e80283484baea344280b3a84e8e7e117,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.9317331
+      value: 3.9275832
       objectReference: {fileID: 0}
     - target: {fileID: 1520609172382933991, guid: e80283484baea344280b3a84e8e7e117,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.838989
+      value: -13.172348
       objectReference: {fileID: 0}
     - target: {fileID: 1520609172382933991, guid: e80283484baea344280b3a84e8e7e117,
         type: 3}

@@ -18,8 +18,8 @@ public class CoinPickup : MonoBehaviour
         if (!entered)
         {
             AudioSource.PlayClipAtPoint(m_CoinPickupSFX, Camera.main.transform.position);
-            FindObjectOfType<GameSession>().AddToScore(m_pointsForCoinPickup);
             Destroy(gameObject);
+            FindObjectOfType<GameSession>().AddToScore(m_pointsForCoinPickup);
             entered = true;
         }
     }
